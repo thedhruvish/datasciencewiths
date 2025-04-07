@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightThemeObsidian from 'starlight-theme-obsidian'
 
 import cloudflare from '@astrojs/cloudflare';
 
@@ -17,17 +18,23 @@ export default defineConfig({
           editLink:{
             baseUrl: "https://github.com/thedhruvish/datasciencewith/blob/main/"
           },
+          plugins: [starlightThemeObsidian()],
           sidebar: [
               {
-                  label: 'Guides',
-                  items: [
-                      // Each item here is one entry in the navigation menu.
-                      { label: 'Example Guide', slug: 'guides/example' },
-                  ],
+                label: 'Introduction',
+                link: '/docs'
               },
               {
-                  label: 'Reference',
-                  autogenerate: { directory: 'reference' },
+                  label: 'Numpy',
+                  autogenerate: { directory: 'Numpy', collapsed: true, },
+              },
+              {
+                  label: 'Pandas',
+                  autogenerate: { directory: 'Pandas' , collapsed: true,},
+              },
+              {
+                  label: 'Statistics',
+                  autogenerate: { directory: 'Statistics', collapsed: true, },
               },
           ],
       }),
