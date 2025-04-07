@@ -8,9 +8,14 @@ import cloudflare from '@astrojs/cloudflare';
 export default defineConfig({
   integrations: [
       starlight({
-          title: 'My Docs',
+          title: 'Data Science',
+          description: "This Platform are the learn Data Science",  
           social: {
-              github: 'https://github.com/withastro/starlight',
+              github: 'https://github.com/thedhruvish/datasciencewith',
+              twitter: "https://x.com/dhruvishlathiya",
+          },
+          editLink:{
+            baseUrl: "https://github.com/thedhruvish/datasciencewith/blob/main/"
           },
           sidebar: [
               {
