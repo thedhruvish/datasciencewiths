@@ -1,0 +1,18 @@
+---
+const { notebook } = Astro.props;
+const colabBase =
+  "https://colab.research.google.com/github/thedhruvish/datasciencewith/blob/main/";
+const colabLink = colabBase + notebook;
+---
+
+<article>
+  <a href={colabLink} target="_blank" rel="noopener noreferrer">
+    <img
+      src="https://datasciencewith.pages.dev/img/icon/colab.svg"
+      alt="Open in Colab"
+      style="height: 1.5em; vertical-align: middle;"
+    />
+  </a>
+
+  <slot />
+</article>
