@@ -7,14 +7,25 @@ const colabLink = `https://colab.research.google.com/github/thedhruvish/datascie
 console.log(colabLink);
 ---
 
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+  />
+</head>
+
 <article>
-  <a href={colabLink} target="_blank" rel="noopener noreferrer">
+  <a
+    href={colabLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    style="display: flex; justify-content: right; align-items: center;"
+  >
     <img
       src="https://datasciencewith.pages.dev/img/icon/colab.svg"
       alt="Open in Colab"
       style="height: 1.5em; vertical-align: middle;"
     />
   </a>
-
-  <slot />
 </article>
+<slot />

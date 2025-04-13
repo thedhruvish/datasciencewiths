@@ -15,8 +15,14 @@ keywords:
     series,
     dataFrame,
   ]
-layout: '@layouts/NotebookLayout.astro'
+layout: '@layouts/NoteBookLayout.astro'
 ---
+
+import { Code } from '@astrojs/starlight/components';
+
+export const exampleCode = `import numpy as np`;
+
+<Code code={exampleCode} lang="py"  />
 
 $$
 Mean = \int_0^{2\pi} \sin(x)\,dx
@@ -29,7 +35,9 @@ $$
 $$
 \text{Median} = \frac{X_{\frac{n}{2}} + X_{\frac{n}{2}+1}}{2}
 $$
-
+<br/>
+<span class="katex">
 $$
 {\displaystyle\text{Mean} = {\frac {1}{n}}\sum _{i=1}^{n}a_{i}={\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}}
 $$
+</span>

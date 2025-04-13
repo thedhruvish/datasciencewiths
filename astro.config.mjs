@@ -4,6 +4,9 @@ import starlight from "@astrojs/starlight";
 import starlightThemeObsidian from "starlight-theme-obsidian";
 
 import cloudflare from "@astrojs/cloudflare";
+import mdx from "@astrojs/mdx";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 // https://astro.build/config
 export default defineConfig({
@@ -37,6 +40,10 @@ export default defineConfig({
           autogenerate: { directory: "Statistics", collapsed: true },
         },
       ],
+    }),
+    mdx({
+      remarkPlugins: [remarkMath],
+      rehypePlugins: [rehypeKatex],
     }),
   ],
 
