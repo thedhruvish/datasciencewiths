@@ -1,8 +1,10 @@
 ---
-const { notebook } = Astro.props;
-const colabBase =
-  "https://colab.research.google.com/github/thedhruvish/datasciencewith/blob/main/";
-const colabLink = colabBase + notebook;
+const url = Astro.url.pathname; // e.g., /Numpy/notebook/Introduction-of-Numpy/
+const pagePath = url.replace(/\/$/, ""); // remove trailing slash
+
+const ipynbPath = `notebook${pagePath}.ipynb`; // full GitHub path for Colab
+const colabLink = `https://colab.research.google.com/github/thedhruvish/datasciencewith/blob/main/${ipynbPath}`;
+console.log(colabLink);
 ---
 
 <article>
