@@ -2,11 +2,14 @@
 title: Numpy function
 
 description: Introduction into numpy library. what is use to the numpy library in the data science and machine learning.
-keywords: [Statistics, mean, numpy,data-science,machine learning,math,functions]
+keywords:
+  [Statistics, mean, numpy, data-science, machine learning, math, functions]
 
 sidebar:
   order: 2
+layout: '@layouts/NotebookLayout.astro'
 ---
+
 ## Indexing and slicing
 
 - You can index and slice NumPy arrays in the same ways you can slice Python lists.
@@ -41,7 +44,7 @@ print(arr[0,2])
 
 ```
 
-- In `a[0,2]`  fist `0` is which array are you access and `2` is which element are access in the array.
+- In `a[0,2]` fist `0` is which array are you access and `2` is which element are access in the array.
 
 - This case 0 meaning your are access this array `[1,2,3]` in second is 2 . This array `[1,2,3]` are second index value are the access. then finally 3 is return.
 
@@ -60,7 +63,7 @@ arr = np.array([1,2,3,4,5,6])
 print(arr[2:4])
 ```
 
-- In `arr[2:4]` Its meaning start 2 index and end 4 index. Ans : ` 3,4 `
+- In `arr[2:4]` Its meaning start 2 index and end 4 index. Ans : `3,4`
 - Can you Ans this Quation : `a[1:5:2]` .
 - Slicing support negative Index.
 
@@ -91,13 +94,13 @@ print(np.mean(arr)) # find the mean values
 
 print(np.median(arr)) # find the median values
 
-print(np.std(arr)) # find the Standard deviation 
+print(np.std(arr)) # find the Standard deviation
 
 print(np.var(arr)) # find the Compute the variance along the specified axis.
 
 ```
 
-***
+---
 
 ## View code file
 

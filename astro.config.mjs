@@ -45,4 +45,11 @@ export default defineConfig({
       enabled: true,
     },
   }),
+  vite: {
+    resolve: {
+      alias: {
+        "@layouts": "/src/layouts", // make sure this matches your project structure
+      },
+    },
+  },
 });
