@@ -11,6 +11,8 @@ sidebar:
   order: 1
 layout: '@layouts/NotebookLayout.astro'
 ---
+import { Code } from '@astrojs/starlight/components';
+
 
 ## What is Numpy ?
 
@@ -43,20 +45,24 @@ layout: '@layouts/NotebookLayout.astro'
 1. open you `Command Prompt` or `terminal`
 2. run this command
 
-```bash
+<Code code={`
 pip install numpy
 
 # or
 
 python -m pip install numpy
-```
+`}
+lang="bash" />
 
 3. Your numpy was install.
 4. if you use numpy than import numpy in below syntax
 
-```python
+<Code code={
+`
 import numpy as np
-```
+`}
+lang='py'
+/>
 
 - in import numpy to import this library and as meaning assas
 
@@ -66,9 +72,9 @@ import numpy as np
 
 - Creates an array from python list,tuple or many array like objects
 
-```py
-arr = np.array([1,2,3,4]) 
-```
+<Code code={
+`arr = np.array([1,2,3,4]) `
+} lang="py" />
 
 ### np.zeros
 
@@ -78,25 +84,28 @@ arr = np.array([1,2,3,4])
 
 - this dimention are pass on the tuple .
 
-```py
+<Code code={`
 arr = np.zeros((3,4))
-```
+`} 
+lang="py">
+
 
 ### np.ones
 
 - ones function are same into zero. but this function are the create an array and Its all the element values are one.
 
-```py
-arr = np.zeros((3,4))
-```
+<Code code={
+`arr = np.zeros((3,4))`
+} lang="py" />
+
 
 ### np.empty
 
 - This function are use to creata a array and all element values are empty(Contains uninitialized Values )
 
-```py
-arr = np.empty((2,2))
-```
+<Code code={
+`arr = np.empty((2,2))`
+} lang="py" />
 
 ### np.arange
 
